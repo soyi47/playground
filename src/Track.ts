@@ -1,0 +1,25 @@
+class Track {
+  private playground = document.getElementById('play-ground') as HTMLDivElement | null;
+  private container = document.createElement('div');
+  private nameContainer = document.createElement('span');
+  private processContainer = document.createElement('p');
+
+  constructor(name: string) {
+    const nameTextNode = document.createTextNode(name);
+    this.nameContainer.appendChild(nameTextNode);
+
+    this.container.appendChild(this.nameContainer);
+    this.container.appendChild(this.processContainer);
+    this.playground?.appendChild(this.container);
+  }
+
+  processForward(): void {
+    const arrowTextNode = document.createTextNode('↓');
+    const arrowContainer = document.createElement('span');
+    arrowContainer.appendChild(arrowTextNode);
+
+    this.processContainer.appendChild(arrowContainer);
+  }
+}
+
+export default Track;
