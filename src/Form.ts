@@ -1,3 +1,5 @@
+import { validateCarNames, validateTurnCount } from './utils/validation';
+
 interface FormConstructorParams {
   onCarNamesSubmit: (carNames: string[]) => void;
   onTurnCountSubmit: (turnCount: number) => void;
@@ -9,34 +11,35 @@ class Form {
 
   constructor({ onCarNamesSubmit, onTurnCountSubmit }: FormConstructorParams) {
     this.carNamesForm = document.getElementById('car-names-form') as HTMLFormElement | null;
+    this.turnCountForm = document.getElementById('turn-count-form') as HTMLFormElement | null;
 
+    this.carNamesAddEventListener(onCarNamesSubmit);
+    this.turnCountAddEventListener(onTurnCountSubmit);
+  }
+
+  private carNamesAddEventListener(onCarNamesSubmit: FormConstructorParams['onCarNamesSubmit']) {
     this.carNamesForm?.addEventListener('submit', function (this, event) {
       event.preventDefault();
 
       const carNamesInput = this.elements.namedItem('car-names-input') as HTMLInputElement | null;
-      const carNames = carNamesInput?.value ? carNamesInput?.value.split(',') : '';
+      const carNames = carNamesInput?.value ? carNamesInput?.value.split(',') : undefined;
 
-      if (!carNames) {
-        alert('자동차 이름을 입력해주세요.');
-        return;
+      if (validateCarNames(carNames)) {
+        onCarNamesSubmit(carNames);
       }
-
-      onCarNamesSubmit(carNames);
     });
+  }
 
-    this.turnCountForm = document.getElementById('turn-count-form') as HTMLFormElement | null;
+  private turnCountAddEventListener(onTurnCountSubmit: FormConstructorParams['onTurnCountSubmit']) {
     this.turnCountForm?.addEventListener('submit', function (this, event) {
       event.preventDefault();
 
       const turnCountInput = this.elements.namedItem('turn-count-input') as HTMLInputElement | null;
-      const turnCount = turnCountInput?.valueAsNumber!;
+      const turnCount = turnCountInput?.valueAsNumber;
 
-      if (!turnCount) {
-        alert('시도 횟수를 입력해주세요.');
-        return;
+      if (validateTurnCount(turnCount)) {
+        onTurnCountSubmit(turnCount);
       }
-
-      onTurnCountSubmit(turnCount);
     });
   }
 

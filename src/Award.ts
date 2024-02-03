@@ -22,7 +22,7 @@ class Award {
   }
 
   showWinner(winnerNames: string[]) {
-    this.winnerNameText.innerText = winnerNames.join(', ');
+    this.winnerNameText.innerText = `🏆 최종 우승자: ${winnerNames.join(', ')} 🏆`;
 
     this.container.appendChild(this.winnerNameText);
     this.container.appendChild(this.restartButton);
