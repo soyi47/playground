@@ -1,10 +1,32 @@
-<!DOCTYPE html>
+<!doctype html>
 <html lang="ko">
   <head>
     <meta charset="utf-8" />
     <title>🚗 ts-racingcar</title>
-  </head>
+  <script defer src="bundle.js"></script></head>
   <body>
     <script src="./dist/index.js"></script>
+    <div class="container">
+      <h1 class="title">🏎️ 자동차 경주 게임 🏁</h1>
+      <form class="form" id="car-names-form">
+        <label for="car-names-input">5자 이하의 자동차 이름을 콤마로 구분하여 입력해주세요.</label>
+        <input id="car-names-input" name="car-names" placeholder="east, west" />
+        <button id="car-names-button" type="submit">확인</button>
+      </form>
+      <form class="form" id="turn-count-form">
+        <label for="turn-count-input">시도할 횟수를 입력해주세요.</label>
+        <input
+          id="turn-count-input"
+          name="turn-count"
+          type="number"
+          placeholder="10"
+          step="1"
+          min="1"
+        />
+        <button id="turn-count-button" type="submit">확인</button>
+      </form>
+      <div id="play-ground"></div>
+      <div id="award"></div>
+    </div>
   </body>
 </html>
