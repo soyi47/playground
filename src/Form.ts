@@ -55,6 +55,36 @@ class Form {
     ) as HTMLInputElement;
 
     turnCountInput.value = '';
+
+    this.setDisabled(false);
+  }
+
+  setDisabled(disabled: boolean) {
+    const carNamesInput = this.carNamesForm!.elements.namedItem(
+      'car-names-input'
+    ) as HTMLInputElement;
+    const carNamesButton = this.carNamesForm!.elements.namedItem(
+      'car-names-button'
+    ) as HTMLButtonElement;
+
+    const turnCountInput = this.turnCountForm!.elements.namedItem(
+      'turn-count-input'
+    ) as HTMLInputElement;
+    const turnCountButton = this.turnCountForm!.elements.namedItem(
+      'turn-count-button'
+    ) as HTMLButtonElement;
+
+    if (disabled) {
+      carNamesInput.setAttribute('disabled', '');
+      carNamesButton.setAttribute('disabled', '');
+      turnCountInput.setAttribute('disabled', '');
+      turnCountButton.setAttribute('disabled', '');
+    } else {
+      carNamesInput.removeAttribute('disabled');
+      carNamesButton.removeAttribute('disabled');
+      turnCountInput.removeAttribute('disabled');
+      turnCountButton.removeAttribute('disabled');
+    }
   }
 }
 

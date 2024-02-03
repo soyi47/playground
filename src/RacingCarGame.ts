@@ -57,6 +57,8 @@ class RacingCarGame {
   }
 
   play(): void {
+    this.form.setDisabled(true);
+
     for (let i = 0; i < this._turnCount; i += 1) {
       this.takeTurn();
     }
