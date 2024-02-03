@@ -1109,7 +1109,7 @@ const validateTurnCount = (turnCount) => {
         if (!turnCount || turnCount < 0) {
             throw new Error('시도할 횟수를 0 이상 자연수로 입력해주세요.');
         }
-        if (Number.isInteger(turnCount)) {
+        if (!Number.isInteger(turnCount)) {
             throw new Error('시도할 횟수는 자연수로 입력해주세요.');
         }
     }
