@@ -941,6 +941,25 @@ class Form {
         carNamesInput.value = '';
         const turnCountInput = this.turnCountForm.elements.namedItem('turn-count-input');
         turnCountInput.value = '';
+        this.setDisabled(false);
+    }
+    setDisabled(disabled) {
+        const carNamesInput = this.carNamesForm.elements.namedItem('car-names-input');
+        const carNamesButton = this.carNamesForm.elements.namedItem('car-names-button');
+        const turnCountInput = this.turnCountForm.elements.namedItem('turn-count-input');
+        const turnCountButton = this.turnCountForm.elements.namedItem('turn-count-button');
+        if (disabled) {
+            carNamesInput.setAttribute('disabled', '');
+            carNamesButton.setAttribute('disabled', '');
+            turnCountInput.setAttribute('disabled', '');
+            turnCountButton.setAttribute('disabled', '');
+        }
+        else {
+            carNamesInput.removeAttribute('disabled');
+            carNamesButton.removeAttribute('disabled');
+            turnCountInput.removeAttribute('disabled');
+            turnCountButton.removeAttribute('disabled');
+        }
     }
 }
 /* harmony default export */ const __WEBPACK_DEFAULT_EXPORT__ = (Form);
@@ -1006,6 +1025,7 @@ class RacingCarGame {
         }
     }
     play() {
+        this.form.setDisabled(true);
         for (let i = 0; i < this._turnCount; i += 1) {
             this.takeTurn();
         }
