@@ -29,7 +29,7 @@ export const validateTurnCount = (turnCount: number | undefined): turnCount is n
       throw new Error('시도할 횟수를 0 이상 자연수로 입력해주세요.');
     }
 
-    if (Number.isInteger(turnCount)) {
+    if (!Number.isInteger(turnCount)) {
       throw new Error('시도할 횟수는 자연수로 입력해주세요.');
     }
   } catch (error: any) {
