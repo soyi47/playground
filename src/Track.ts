@@ -5,6 +5,10 @@ class Track {
   private processContainer = document.createElement('p');
 
   constructor(name: string) {
+    this.container.setAttribute('class', 'track');
+    this.nameContainer.setAttribute('class', 'car-name');
+    this.processContainer.setAttribute('class', 'car-process');
+
     const nameTextNode = document.createTextNode(name);
     this.nameContainer.appendChild(nameTextNode);
 

@@ -1,0 +1,136 @@
+@import 'reset.css';
+
+/* 기본 스타일 */
+
+body {
+  display: flex;
+  flex-direction: column;
+  align-items: center;
+
+  padding: 100px;
+
+  background-color: lightgray;
+
+  font-size: 16px;
+}
+
+input {
+  border: 1px solid lightgray;
+  padding: 0.5rem;
+}
+
+button {
+  border: none;
+  border-radius: 0.25rem;
+  padding: 0.5rem 1rem;
+
+  background-color: lightskyblue;
+  color: white;
+}
+
+/* 게임 컨테이너 및 타이틀 */
+
+.container {
+  min-width: 380px;
+
+  display: flex;
+  flex-direction: column;
+  align-items: center;
+
+  background-color: white;
+
+  padding: 60px 100px;
+}
+
+.title {
+  padding-bottom: 20px;
+
+  font-size: 1.2rem;
+  font-weight: bold;
+}
+
+/* 입력 폼 */
+
+.form {
+  width: 100%;
+
+  display: grid;
+  align-self: flex-start;
+
+  grid-template:
+    'label label label label' 1.25rem
+    'input input input button' 2rem;
+  column-gap: 0.5rem;
+}
+
+.form:not(:first-child) {
+  margin-top: 1rem;
+}
+
+.form label {
+  grid-area: label;
+}
+
+.form input {
+  grid-area: input;
+}
+
+.form button {
+  grid-area: button;
+}
+
+/* 레이싱 경기 */
+
+#play-ground {
+  margin-top: 1rem;
+
+  display: flex;
+  gap: 0.5rem;
+}
+
+.track {
+  display: flex;
+  flex-direction: column;
+}
+
+.car-name {
+  display: block;
+  min-width: 80px;
+  padding: 0.5rem;
+  border: none;
+  border-radius: 0.25rem;
+
+  text-align: center;
+
+  background-color: lightgrey;
+}
+
+.car-process {
+  margin-top: 8px;
+  display: flex;
+  flex-direction: column;
+
+  text-align: center;
+  font-size: 1.5rem;
+  font-weight: bold;
+}
+
+.car-process span:not(:first-child) {
+  margin-top: 4px;
+}
+
+/* 게임 결과 */
+
+#award {
+  margin-top: 1rem;
+
+  display: flex;
+  flex-direction: column;
+  align-items: center;
+  gap: 1rem;
+}
+
+#award p {
+  font-size: 1.25rem;
+  font-weight: bold;
+}
