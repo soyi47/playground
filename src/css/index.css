@@ -28,6 +28,10 @@ button {
   color: white;
 }
 
+button:hover {
+  cursor: pointer;
+}
+
 /* 게임 컨테이너 및 타이틀 */
 
 .container {
