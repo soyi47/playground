@@ -56,10 +56,10 @@ class Form {
 
     turnCountInput.value = '';
 
-    this.setDisabled(false);
+    this.setFormDisabled(false);
   }
 
-  setDisabled(disabled: boolean) {
+  setFormDisabled(disabled: boolean) {
     const carNamesInput = this.carNamesForm!.elements.namedItem(
       'car-names-input'
     ) as HTMLInputElement;
