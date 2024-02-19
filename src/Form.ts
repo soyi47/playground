@@ -22,7 +22,7 @@ class Form {
       event.preventDefault();
 
       const carNamesInput = this.elements.namedItem('car-names-input') as HTMLInputElement | null;
-      const carNames = carNamesInput?.value ? carNamesInput?.value.split(',') : undefined;
+      const carNames = carNamesInput?.value?.split(',');
 
       if (validateCarNames(carNames)) {
         onCarNamesSubmit(carNames);
