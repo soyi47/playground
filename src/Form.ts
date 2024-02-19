@@ -13,11 +13,11 @@ class Form {
     this.carNamesForm = document.getElementById('car-names-form') as HTMLFormElement | null;
     this.turnCountForm = document.getElementById('turn-count-form') as HTMLFormElement | null;
 
-    this.carNamesAddEventListener(onCarNamesSubmit);
-    this.turnCountAddEventListener(onTurnCountSubmit);
+    this.addCarNamesEventListener(onCarNamesSubmit);
+    this.addTurnCountEventListener(onTurnCountSubmit);
   }
 
-  private carNamesAddEventListener(onCarNamesSubmit: FormConstructorParams['onCarNamesSubmit']) {
+  private addCarNamesEventListener(onCarNamesSubmit: FormConstructorParams['onCarNamesSubmit']) {
     this.carNamesForm?.addEventListener('submit', function (this, event) {
       event.preventDefault();
 
@@ -30,7 +30,7 @@ class Form {
     });
   }
 
-  private turnCountAddEventListener(onTurnCountSubmit: FormConstructorParams['onTurnCountSubmit']) {
+  private addTurnCountEventListener(onTurnCountSubmit: FormConstructorParams['onTurnCountSubmit']) {
     this.turnCountForm?.addEventListener('submit', function (this, event) {
       event.preventDefault();
 
