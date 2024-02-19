@@ -52,6 +52,10 @@ button {
   color: white;
 }
 
+button:hover {
+  cursor: pointer;
+}
+
 /* 게임 컨테이너 및 타이틀 */
 
 .container {
@@ -158,7 +162,7 @@ button {
   font-size: 1.25rem;
   font-weight: bold;
 }
-`, "",{"version":3,"sources":["webpack://./src/css/index.css"],"names":[],"mappings":"AAEA,WAAW;;AAEX;EACE,aAAa;EACb,sBAAsB;EACtB,mBAAmB;;EAEnB,cAAc;;EAEd,2BAA2B;;EAE3B,eAAe;AACjB;;AAEA;EACE,2BAA2B;EAC3B,eAAe;AACjB;;AAEA;EACE,YAAY;EACZ,sBAAsB;EACtB,oBAAoB;;EAEpB,8BAA8B;EAC9B,YAAY;AACd;;AAEA,kBAAkB;;AAElB;EACE,gBAAgB;;EAEhB,aAAa;EACb,sBAAsB;EACtB,mBAAmB;;EAEnB,uBAAuB;;EAEvB,mBAAmB;AACrB;;AAEA;EACE,oBAAoB;;EAEpB,iBAAiB;EACjB,iBAAiB;AACnB;;AAEA,SAAS;;AAET;EACE,WAAW;;EAEX,aAAa;EACb,sBAAsB;;EAEtB;;mCAEiC;EACjC,kBAAkB;AACpB;;AAEA;EACE,gBAAgB;AAClB;;AAEA;EACE,gBAAgB;AAClB;;AAEA;EACE,gBAAgB;AAClB;;AAEA;EACE,iBAAiB;AACnB;;AAEA,WAAW;;AAEX;EACE,gBAAgB;;EAEhB,aAAa;EACb,WAAW;AACb;;AAEA;EACE,aAAa;EACb,sBAAsB;AACxB;;AAEA;EACE,cAAc;EACd,eAAe;EACf,eAAe;EACf,YAAY;EACZ,sBAAsB;;EAEtB,kBAAkB;;EAElB,2BAA2B;AAC7B;;AAEA;EACE,eAAe;EACf,aAAa;EACb,sBAAsB;;EAEtB,kBAAkB;EAClB,iBAAiB;EACjB,iBAAiB;AACnB;;AAEA;EACE,eAAe;AACjB;;AAEA,UAAU;;AAEV;EACE,gBAAgB;;EAEhB,aAAa;EACb,sBAAsB;EACtB,mBAAmB;EACnB,SAAS;AACX;;AAEA;EACE,kBAAkB;EAClB,iBAAiB;AACnB","sourcesContent":["@import 'reset.css';\n\n/* 기본 스타일 */\n\nbody {\n  display: flex;\n  flex-direction: column;\n  align-items: center;\n\n  padding: 100px;\n\n  background-color: lightgray;\n\n  font-size: 16px;\n}\n\ninput {\n  border: 1px solid lightgray;\n  padding: 0.5rem;\n}\n\nbutton {\n  border: none;\n  border-radius: 0.25rem;\n  padding: 0.5rem 1rem;\n\n  background-color: lightskyblue;\n  color: white;\n}\n\n/* 게임 컨테이너 및 타이틀 */\n\n.container {\n  min-width: 380px;\n\n  display: flex;\n  flex-direction: column;\n  align-items: center;\n\n  background-color: white;\n\n  padding: 60px 100px;\n}\n\n.title {\n  padding-bottom: 20px;\n\n  font-size: 1.2rem;\n  font-weight: bold;\n}\n\n/* 입력 폼 */\n\n.form {\n  width: 100%;\n\n  display: grid;\n  align-self: flex-start;\n\n  grid-template:\n    'label label label label' 1.25rem\n    'input input input button' 2rem;\n  column-gap: 0.5rem;\n}\n\n.form:not(:first-child) {\n  margin-top: 1rem;\n}\n\n.form label {\n  grid-area: label;\n}\n\n.form input {\n  grid-area: input;\n}\n\n.form button {\n  grid-area: button;\n}\n\n/* 레이싱 경기 */\n\n#play-ground {\n  margin-top: 1rem;\n\n  display: flex;\n  gap: 0.5rem;\n}\n\n.track {\n  display: flex;\n  flex-direction: column;\n}\n\n.car-name {\n  display: block;\n  min-width: 80px;\n  padding: 0.5rem;\n  border: none;\n  border-radius: 0.25rem;\n\n  text-align: center;\n\n  background-color: lightgrey;\n}\n\n.car-process {\n  margin-top: 8px;\n  display: flex;\n  flex-direction: column;\n\n  text-align: center;\n  font-size: 1.5rem;\n  font-weight: bold;\n}\n\n.car-process span:not(:first-child) {\n  margin-top: 4px;\n}\n\n/* 게임 결과 */\n\n#award {\n  margin-top: 1rem;\n\n  display: flex;\n  flex-direction: column;\n  align-items: center;\n  gap: 1rem;\n}\n\n#award p {\n  font-size: 1.25rem;\n  font-weight: bold;\n}\n"],"sourceRoot":""}]);
+`, "",{"version":3,"sources":["webpack://./src/css/index.css"],"names":[],"mappings":"AAEA,WAAW;;AAEX;EACE,aAAa;EACb,sBAAsB;EACtB,mBAAmB;;EAEnB,cAAc;;EAEd,2BAA2B;;EAE3B,eAAe;AACjB;;AAEA;EACE,2BAA2B;EAC3B,eAAe;AACjB;;AAEA;EACE,YAAY;EACZ,sBAAsB;EACtB,oBAAoB;;EAEpB,8BAA8B;EAC9B,YAAY;AACd;;AAEA;EACE,eAAe;AACjB;;AAEA,kBAAkB;;AAElB;EACE,gBAAgB;;EAEhB,aAAa;EACb,sBAAsB;EACtB,mBAAmB;;EAEnB,uBAAuB;;EAEvB,mBAAmB;AACrB;;AAEA;EACE,oBAAoB;;EAEpB,iBAAiB;EACjB,iBAAiB;AACnB;;AAEA,SAAS;;AAET;EACE,WAAW;;EAEX,aAAa;EACb,sBAAsB;;EAEtB;;mCAEiC;EACjC,kBAAkB;AACpB;;AAEA;EACE,gBAAgB;AAClB;;AAEA;EACE,gBAAgB;AAClB;;AAEA;EACE,gBAAgB;AAClB;;AAEA;EACE,iBAAiB;AACnB;;AAEA,WAAW;;AAEX;EACE,gBAAgB;;EAEhB,aAAa;EACb,WAAW;AACb;;AAEA;EACE,aAAa;EACb,sBAAsB;AACxB;;AAEA;EACE,cAAc;EACd,eAAe;EACf,eAAe;EACf,YAAY;EACZ,sBAAsB;;EAEtB,kBAAkB;;EAElB,2BAA2B;AAC7B;;AAEA;EACE,eAAe;EACf,aAAa;EACb,sBAAsB;;EAEtB,kBAAkB;EAClB,iBAAiB;EACjB,iBAAiB;AACnB;;AAEA;EACE,eAAe;AACjB;;AAEA,UAAU;;AAEV;EACE,gBAAgB;;EAEhB,aAAa;EACb,sBAAsB;EACtB,mBAAmB;EACnB,SAAS;AACX;;AAEA;EACE,kBAAkB;EAClB,iBAAiB;AACnB","sourcesContent":["@import 'reset.css';\n\n/* 기본 스타일 */\n\nbody {\n  display: flex;\n  flex-direction: column;\n  align-items: center;\n\n  padding: 100px;\n\n  background-color: lightgray;\n\n  font-size: 16px;\n}\n\ninput {\n  border: 1px solid lightgray;\n  padding: 0.5rem;\n}\n\nbutton {\n  border: none;\n  border-radius: 0.25rem;\n  padding: 0.5rem 1rem;\n\n  background-color: lightskyblue;\n  color: white;\n}\n\nbutton:hover {\n  cursor: pointer;\n}\n\n/* 게임 컨테이너 및 타이틀 */\n\n.container {\n  min-width: 380px;\n\n  display: flex;\n  flex-direction: column;\n  align-items: center;\n\n  background-color: white;\n\n  padding: 60px 100px;\n}\n\n.title {\n  padding-bottom: 20px;\n\n  font-size: 1.2rem;\n  font-weight: bold;\n}\n\n/* 입력 폼 */\n\n.form {\n  width: 100%;\n\n  display: grid;\n  align-self: flex-start;\n\n  grid-template:\n    'label label label label' 1.25rem\n    'input input input button' 2rem;\n  column-gap: 0.5rem;\n}\n\n.form:not(:first-child) {\n  margin-top: 1rem;\n}\n\n.form label {\n  grid-area: label;\n}\n\n.form input {\n  grid-area: input;\n}\n\n.form button {\n  grid-area: button;\n}\n\n/* 레이싱 경기 */\n\n#play-ground {\n  margin-top: 1rem;\n\n  display: flex;\n  gap: 0.5rem;\n}\n\n.track {\n  display: flex;\n  flex-direction: column;\n}\n\n.car-name {\n  display: block;\n  min-width: 80px;\n  padding: 0.5rem;\n  border: none;\n  border-radius: 0.25rem;\n\n  text-align: center;\n\n  background-color: lightgrey;\n}\n\n.car-process {\n  margin-top: 8px;\n  display: flex;\n  flex-direction: column;\n\n  text-align: center;\n  font-size: 1.5rem;\n  font-weight: bold;\n}\n\n.car-process span:not(:first-child) {\n  margin-top: 4px;\n}\n\n/* 게임 결과 */\n\n#award {\n  margin-top: 1rem;\n\n  display: flex;\n  flex-direction: column;\n  align-items: center;\n  gap: 1rem;\n}\n\n#award p {\n  font-size: 1.25rem;\n  font-weight: bold;\n}\n"],"sourceRoot":""}]);
 // Exports
 /* harmony default export */ const __WEBPACK_DEFAULT_EXPORT__ = (___CSS_LOADER_EXPORT___);
 
@@ -834,14 +838,17 @@ class Award {
     constructor({ onRestart }) {
         this.container = document.getElementById('award');
         this.winnerNameText = document.createElement('p');
+        this.createRestartButton({ onRestart });
+    }
+    init() {
+        this.container.innerHTML = '';
+    }
+    createRestartButton({ onRestart }) {
         this.restartButton = document.createElement('button');
         this.restartButton.innerText = '다시 시작하기';
         this.restartButton.addEventListener('click', function () {
             onRestart();
         });
-    }
-    init() {
-        this.container.innerHTML = '';
     }
     showWinner(winnerNames) {
         this.winnerNameText.innerText = `🏆 최종 우승자: ${winnerNames.join(', ')} 🏆`;
@@ -874,7 +881,6 @@ class Car {
     constructor(name) {
         this._name = name;
         this._progress = 0;
-        this._track = new _Track__WEBPACK_IMPORTED_MODULE_0__["default"](name);
     }
     get name() {
         return this._name;
@@ -882,11 +888,15 @@ class Car {
     get progress() {
         return this._progress;
     }
+    ready() {
+        this._track = new _Track__WEBPACK_IMPORTED_MODULE_0__["default"](this.name);
+    }
     takeTurn() {
+        var _a;
         const randomDigit = getRandomDigit();
         if (randomDigit >= PROCESS_CONDITION) {
             this._progress += 1;
-            this._track.processForward();
+            (_a = this._track) === null || _a === void 0 ? void 0 : _a.processForward();
         }
     }
 }
@@ -911,21 +921,22 @@ class Form {
     constructor({ onCarNamesSubmit, onTurnCountSubmit }) {
         this.carNamesForm = document.getElementById('car-names-form');
         this.turnCountForm = document.getElementById('turn-count-form');
-        this.carNamesAddEventListener(onCarNamesSubmit);
-        this.turnCountAddEventListener(onTurnCountSubmit);
+        this.addCarNamesEventListener(onCarNamesSubmit);
+        this.addTurnCountEventListener(onTurnCountSubmit);
     }
-    carNamesAddEventListener(onCarNamesSubmit) {
+    addCarNamesEventListener(onCarNamesSubmit) {
         var _a;
         (_a = this.carNamesForm) === null || _a === void 0 ? void 0 : _a.addEventListener('submit', function (event) {
+            var _a;
             event.preventDefault();
             const carNamesInput = this.elements.namedItem('car-names-input');
-            const carNames = (carNamesInput === null || carNamesInput === void 0 ? void 0 : carNamesInput.value) ? carNamesInput === null || carNamesInput === void 0 ? void 0 : carNamesInput.value.split(',') : undefined;
+            const carNames = (_a = carNamesInput === null || carNamesInput === void 0 ? void 0 : carNamesInput.value) === null || _a === void 0 ? void 0 : _a.split(',');
             if ((0,_utils_validation__WEBPACK_IMPORTED_MODULE_0__.validateCarNames)(carNames)) {
                 onCarNamesSubmit(carNames);
             }
         });
     }
-    turnCountAddEventListener(onTurnCountSubmit) {
+    addTurnCountEventListener(onTurnCountSubmit) {
         var _a;
         (_a = this.turnCountForm) === null || _a === void 0 ? void 0 : _a.addEventListener('submit', function (event) {
             event.preventDefault();
@@ -941,9 +952,9 @@ class Form {
         carNamesInput.value = '';
         const turnCountInput = this.turnCountForm.elements.namedItem('turn-count-input');
         turnCountInput.value = '';
-        this.setDisabled(false);
+        this.setFormDisabled(false);
     }
-    setDisabled(disabled) {
+    setFormDisabled(disabled) {
         const carNamesInput = this.carNamesForm.elements.namedItem('car-names-input');
         const carNamesButton = this.carNamesForm.elements.namedItem('car-names-button');
         const turnCountInput = this.turnCountForm.elements.namedItem('turn-count-input');
@@ -980,6 +991,8 @@ __webpack_require__.r(__webpack_exports__);
 /* harmony import */ var _Award__WEBPACK_IMPORTED_MODULE_0__ = __webpack_require__(/*! ./Award */ "./src/Award.ts");
 /* harmony import */ var _Car__WEBPACK_IMPORTED_MODULE_1__ = __webpack_require__(/*! ./Car */ "./src/Car.ts");
 /* harmony import */ var _Form__WEBPACK_IMPORTED_MODULE_2__ = __webpack_require__(/*! ./Form */ "./src/Form.ts");
+/* harmony import */ var _utils_sort__WEBPACK_IMPORTED_MODULE_3__ = __webpack_require__(/*! ./utils/sort */ "./src/utils/sort.ts");
+
 
 
 
@@ -992,10 +1005,7 @@ class RacingCarGame {
         this.award = new _Award__WEBPACK_IMPORTED_MODULE_0__["default"]({
             onRestart: this.init.bind(this),
         });
-        this.playground = document.getElementById('play-ground');
-        this.sortByRank = (a, b) => {
-            return b.progress - a.progress;
-        };
+        this.playgroundElement = document.getElementById('play-ground');
         this._cars = [];
         this._turnCount = 0;
         this._winners = [];
@@ -1006,7 +1016,7 @@ class RacingCarGame {
         this._winners = [];
         this.form.init();
         this.award.init();
-        this.playground.innerHTML = '';
+        this.playgroundElement.innerHTML = '';
     }
     isReadyToPlay() {
         return this._cars.length > 0 && this._turnCount > 0;
@@ -1025,7 +1035,8 @@ class RacingCarGame {
         }
     }
     play() {
-        this.form.setDisabled(true);
+        this.form.setFormDisabled(true);
+        this._cars.forEach(car => car.ready());
         for (let i = 0; i < this._turnCount; i += 1) {
             this.takeTurn();
         }
@@ -1041,10 +1052,10 @@ class RacingCarGame {
         this.award.showWinner(this._winners.map(car => car.name));
     }
     calculateWinner() {
-        const sortedByRank = [...this._cars];
-        sortedByRank.sort(this.sortByRank);
-        const winnerProgress = sortedByRank[0].progress;
-        this._winners = sortedByRank.filter(car => {
+        const carListsortedByRank = [...this._cars];
+        carListsortedByRank.sort(_utils_sort__WEBPACK_IMPORTED_MODULE_3__.sortCarByRank);
+        const winnerProgress = carListsortedByRank[0].progress;
+        this._winners = carListsortedByRank.filter(car => {
             return car.progress === winnerProgress;
         });
     }
@@ -1066,11 +1077,13 @@ __webpack_require__.r(__webpack_exports__);
 /* harmony export */ });
 class Track {
     constructor(name) {
-        var _a;
         this.playground = document.getElementById('play-ground');
         this.container = document.createElement('div');
         this.nameContainer = document.createElement('span');
         this.processContainer = document.createElement('p');
+        if (!this.playground) {
+            throw Error('id가 play-ground인 요소를 찾을 수 없습니다.');
+        }
         this.container.setAttribute('class', 'track');
         this.nameContainer.setAttribute('class', 'car-name');
         this.processContainer.setAttribute('class', 'car-process');
@@ -1078,7 +1091,7 @@ class Track {
         this.nameContainer.appendChild(nameTextNode);
         this.container.appendChild(this.nameContainer);
         this.container.appendChild(this.processContainer);
-        (_a = this.playground) === null || _a === void 0 ? void 0 : _a.appendChild(this.container);
+        this.playground.appendChild(this.container);
     }
     processForward() {
         const arrowTextNode = document.createTextNode('↓');
@@ -1088,6 +1101,23 @@ class Track {
     }
 }
 /* harmony default export */ const __WEBPACK_DEFAULT_EXPORT__ = (Track);
+
+
+/***/ }),
+
+/***/ "./src/utils/sort.ts":
+/*!***************************!*\
+  !*** ./src/utils/sort.ts ***!
+  \***************************/
+/***/ ((__unused_webpack_module, __webpack_exports__, __webpack_require__) => {
+
+__webpack_require__.r(__webpack_exports__);
+/* harmony export */ __webpack_require__.d(__webpack_exports__, {
+/* harmony export */   sortCarByRank: () => (/* binding */ sortCarByRank)
+/* harmony export */ });
+const sortCarByRank = (a, b) => {
+    return b.progress - a.progress;
+};
 
 
 /***/ }),
