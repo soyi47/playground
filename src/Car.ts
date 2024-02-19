@@ -9,13 +9,11 @@ const getRandomDigit = (): number => {
 class Car {
   private readonly _name: string;
   private _progress: number;
-  private _track: Track;
+  private _track: Track | undefined;
 
   constructor(name: string) {
     this._name = name;
     this._progress = 0;
-
-    this._track = new Track(name);
   }
 
   get name(): string {
@@ -26,12 +24,16 @@ class Car {
     return this._progress;
   }
 
+  ready(): void {
+    this._track = new Track(this.name);
+  }
+
   takeTurn(): void {
     const randomDigit = getRandomDigit();
 
     if (randomDigit >= PROCESS_CONDITION) {
       this._progress += 1;
-      this._track.processForward();
+      this._track?.processForward();
     }
   }
 }

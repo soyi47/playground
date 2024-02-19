@@ -60,6 +60,8 @@ class RacingCarGame {
   play(): void {
     this.form.setFormDisabled(true);
 
+    this._cars.forEach(car => car.ready());
+
     for (let i = 0; i < this._turnCount; i += 1) {
       this.takeTurn();
     }
