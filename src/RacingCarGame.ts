@@ -1,6 +1,7 @@
 import Award from './Award';
 import Car from './Car';
 import Form from './Form';
+import { sortCarByRank } from './utils/sort';
 
 class RacingCarGame {
   private _cars: Car[];
@@ -79,17 +80,13 @@ class RacingCarGame {
 
   private calculateWinner(): void {
     const sortedByRank = [...this._cars];
-    sortedByRank.sort(this.sortByRank);
+    sortedByRank.sort(sortCarByRank);
 
     const winnerProgress = sortedByRank[0].progress;
     this._winners = sortedByRank.filter(car => {
       return car.progress === winnerProgress;
     });
   }
-
-  private readonly sortByRank = (a: Car, b: Car): number => {
-    return b.progress - a.progress;
-  };
 }
 
 export default RacingCarGame;
