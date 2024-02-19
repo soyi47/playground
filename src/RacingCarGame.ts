@@ -17,7 +17,7 @@ class RacingCarGame {
     onRestart: this.init.bind(this),
   });
 
-  private readonly playground = document.getElementById('play-ground') as HTMLDivElement;
+  private readonly playgroundElement = document.getElementById('play-ground') as HTMLDivElement;
 
   constructor() {
     this._cars = [];
@@ -33,7 +33,7 @@ class RacingCarGame {
     this.form.init();
     this.award.init();
 
-    this.playground.innerHTML = '';
+    this.playgroundElement.innerHTML = '';
   }
 
   isReadyToPlay(): boolean {
@@ -79,11 +79,11 @@ class RacingCarGame {
   }
 
   private calculateWinner(): void {
-    const sortedByRank = [...this._cars];
-    sortedByRank.sort(sortCarByRank);
+    const carListsortedByRank = [...this._cars];
+    carListsortedByRank.sort(sortCarByRank);
 
-    const winnerProgress = sortedByRank[0].progress;
-    this._winners = sortedByRank.filter(car => {
+    const winnerProgress = carListsortedByRank[0].progress;
+    this._winners = carListsortedByRank.filter(car => {
       return car.progress === winnerProgress;
     });
   }
