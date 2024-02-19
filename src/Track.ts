@@ -5,6 +5,10 @@ class Track {
   private processContainer = document.createElement('p');
 
   constructor(name: string) {
+    if (!this.playground) {
+      throw Error('id가 play-ground인 요소를 찾을 수 없습니다.');
+    }
+
     this.container.setAttribute('class', 'track');
     this.nameContainer.setAttribute('class', 'car-name');
     this.processContainer.setAttribute('class', 'car-process');
@@ -14,7 +18,7 @@ class Track {
 
     this.container.appendChild(this.nameContainer);
     this.container.appendChild(this.processContainer);
-    this.playground?.appendChild(this.container);
+    this.playground.appendChild(this.container);
   }
 
   processForward(): void {
