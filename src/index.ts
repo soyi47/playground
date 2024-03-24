@@ -1,7 +1,5 @@
-const component: () => HTMLElement = () => {
-  const element = document.createElement("div");
-  element.innerText = "Hello";
-  return element;
-};
+import RacingCarGame from './RacingCarGame';
 
-document.body.appendChild(component());
+import './css/index.css';
+
+new RacingCarGame();
